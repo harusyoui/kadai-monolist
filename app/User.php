@@ -49,7 +49,7 @@ class User extends Authenticatable
         }else{
             // 未wantであればwantする
             $this->items()->attach($itemId,['type' => 'want']);
-            return false;
+            return true;
         }
     }
     
@@ -63,7 +63,7 @@ class User extends Authenticatable
         }else{
             // 未haveであればhaveする
             $this->items()->attach($itemId,['type' => 'have']);
-            return false;
+            return true;
         }
     }
     
